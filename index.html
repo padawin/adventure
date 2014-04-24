@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script type="text/javascript" src="http://padawin.github.io/Butterfly-js/js/Butterfly.js"></script>
+		<script type="text/javascript" src="stories/test.js"></script>
+		<script type="text/javascript" src="js/engine.min.js"></script>
+	</head>
+	<body>
+		<div id="screen"></div>
+		<input type="text" id="choice" />
+		<input type="button" id="choice-btn" value="choice" />
+		<script type="text/javascript">
+			B.addEvent(window,'load',function(){
+				engine(
+					stories['test'],
+					B.$id('screen'),
+					B.$id('choice'),
+					B.$id('choice-btn')
+				);
+			});
+
+		</script>
+	</body>
+</html>
