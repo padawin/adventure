@@ -9,15 +9,37 @@
 		<form id="controls">
 			<input type="text" id="choice" />
 			<input type="submit" id="choice-btn" value="Send action" />
+			<select id="select-world">
+				<option value="">Select story</option>
+			</select>
 		</form>
 		<script type="text/javascript">
 			B.addEvent(window,'load',function(){
-				engine(
-					stories[0]['content'],
-					B.$id('screen'),
-					B.$id('choice'),
-					B.$id('controls')
-				);
+				var select=B.$id('select-world'),
+					screen=B.$id('screen'),
+					nbStories=stories.length;
+
+				for (var s=0; s<nbStories; s++) {
+					B.create(
+						'option',
+						{'value': s, 'text': stories[s].title},
+						select
+					);
+				}
+
+				B.addEvent(select,'change',function(){
+					screen.innerHTML = '';
+					if (select.selectedIndex == 0) return;
+
+					engine(
+						stories[select.selectedIndex-1]['content'],
+						screen,
+						B.$id('choice'),
+						B.$id('controls')
+					);
+				});
+
+
 			});
 
 		</script>
