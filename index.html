@@ -6,15 +6,17 @@
 	</head>
 	<body>
 		<div id="screen"></div>
-		<input type="text" id="choice" />
-		<input type="button" id="choice-btn" value="choice" />
+		<form id="controls">
+			<input type="text" id="choice" />
+			<input type="submit" id="choice-btn" value="Send action" />
+		</form>
 		<script type="text/javascript">
 			B.addEvent(window,'load',function(){
 				engine(
 					stories['test'],
 					B.$id('screen'),
 					B.$id('choice'),
-					B.$id('choice-btn')
+					B.$id('controls')
 				);
 			});
 
