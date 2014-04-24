@@ -1,6 +1,6 @@
-if (!stories)var stories={};
+if (!stories)var stories=[];
 
-stories['test'] = {
+stories[stories.length] = {
 	'title': 'A test story...',
 	'content': {
 		'_start_': {
