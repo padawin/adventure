@@ -35,6 +35,10 @@ stories[stories.length] = {
 
 Then, the story file can be included in index.html in the head tag.
 
+## Where to play to the existing stories?
+
+Here: http://padawin.github.io/adVenture/
+
 ## Contributions
 
 Please feel free to create original stories and send them through pull requests.
