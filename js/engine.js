@@ -12,7 +12,7 @@
  */
 var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex){
 	// Set the initial scene
-	scene=story[story._start_];
+	scene=story._start_;
 	// define the function to update the screen with a scene description
 	updateScreen=function(){
 		screen.innerHTML+=scene.description;
