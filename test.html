@@ -23,21 +23,6 @@
 					'links': {}
 				}
 			};
-
-			var engine = function(story,screen,input,button,scene,updateScreen){
-				scene = story[story.__start__];
-				updateScreen=function(){
-					screen.innerHTML+=scene.description;
-				}
-				button.onclick=function(){
-					value=scene.links[input.value];
-					if(value){
-						scene=story[value];updateScreen();
-					}
-				}
-				updateScreen();
-			};
-
 			var engine = function(a,b,c,d,e,f,g){f=function(v)b.innerHTML+=(e=v).description;d.onclick=function(){g=e.links[c.value];g&&f(a[g])};f(a[a._start_]);};
 
 			engine(
