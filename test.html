@@ -1,0 +1,51 @@
+<html>
+	<head></head>
+	<body>
+		<div id="screen"></div>
+		<input type="text" id="choice" />
+		<input type="button" id="choice-btn" />
+		<script type="text/javascript">
+			var story = {
+				'_start_': 'scene1',
+				'scene1': {
+					'description': 'Scene 1 description.<br/>2 for scene 2; 3 for scene 3<br/>',
+					'links': {
+						'2': 'scene2',
+						'3': 'scene3'
+					}
+				},
+				'scene2': {
+					'description': 'End with scene 2',
+					'links': {}
+				},
+				'scene3': {
+					'description': 'End with scene 3',
+					'links': {}
+				}
+			};
+
+			var engine = function(story,screen,input,button,scene,updateScreen){
+				scene = story[story.__start__];
+				updateScreen=function(){
+					screen.innerHTML+=scene.description;
+				}
+				button.onclick=function(){
+					value=scene.links[input.value];
+					if(value){
+						scene=story[value];updateScreen();
+					}
+				}
+				updateScreen();
+			};
+
+			var engine = function(a,b,c,d,e,f,g){f=function(v)b.innerHTML+=(e=v).description;d.onclick=function(){g=e.links[c.value];g&&f(a[g])};f(a[a._start_]);};
+
+			engine(
+				story,
+				document.getElementById('screen'),
+				document.getElementById('choice'),
+				document.getElementById('choice-btn')
+			);
+		</script>
+	</body>
+</html>
