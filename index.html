@@ -17,6 +17,7 @@
 			B.addEvent(window,'load',function(){
 				var select=B.$id('select-world'),
 					screen=B.$id('screen'),
+					choice=B.$id('choice'),
 					nbStories=stories.length;
 
 				for (var s=0; s<nbStories; s++) {
@@ -29,6 +30,8 @@
 
 				B.addEvent(select,'change',function(){
 					screen.innerHTML = '';
+					choice.value='';
+					choice.focus();
 					if (select.selectedIndex == 0) return;
 
 					engine(

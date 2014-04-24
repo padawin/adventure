@@ -10,7 +10,7 @@
  * 		scene
  * @param newSceneIndex Placeholder, index of the next scene to play
  */
-var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex){
+var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex,value='value'){
 	// Set the initial scene
 	scene=story._start_;
 	// define the function to update the screen with a scene description
@@ -20,7 +20,9 @@ var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex){
 	// event to validate the user's choice
 	form.onsubmit=function(){
 		// get the chosen scene's index
-		newSceneIndex=scene.links[input.value];
+		newSceneIndex=scene.links[input[value]];
+		input[value]='';
+		input.focus();
 		if(newSceneIndex){
 			// update the current scene
 			scene=story[newSceneIndex];
