@@ -19,6 +19,7 @@
 				var select=B.$id('select-world'),
 					screen=B.$id('screen'),
 					choice=B.$id('choice'),
+					controls=B.$id('controls'),
 					nbStories=stories.length;
 
 				for (var s=0; s<nbStories; s++) {
@@ -38,8 +39,8 @@
 					engine(
 						stories[select.selectedIndex-1]['content'],
 						screen,
-						B.$id('choice'),
-						B.$id('controls')
+						choice,
+						controls
 					);
 				});
 
