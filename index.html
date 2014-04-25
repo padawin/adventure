@@ -1,5 +1,10 @@
 <html>
 	<head>
+		<style type="text/css">
+			.hidden {
+				display: none;
+			}
+		</style>
 		<script type="text/javascript" src="http://padawin.github.io/Butterfly-js/js/Butterfly.js"></script>
 		<script type="text/javascript" src="js/engine.min.js"></script>
 		<script type="text/javascript" src="stories/aStrangePlace.js"></script>
@@ -22,6 +27,7 @@
 					controls=B.$id('controls'),
 					nbStories=stories.length;
 
+				B.addClass(controls, 'hidden');
 				for (var s=0; s<nbStories; s++) {
 					B.create(
 						'option',
@@ -34,7 +40,11 @@
 					screen.innerHTML = '';
 					choice.value='';
 					choice.focus();
-					if (select.selectedIndex == 0) return;
+					if (select.selectedIndex == 0) {
+						B.addClass(controls, 'hidden');
+						return;
+					}
+					B.removeClass(controls, 'hidden');
 
 					engine(
 						stories[select.selectedIndex-1]['content'],
