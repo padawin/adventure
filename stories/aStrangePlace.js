@@ -44,9 +44,7 @@ stories[stories.length] = {
 			}
 		},
 		'scene4_with_bottle': {
-			'description': 'The place looks like a maze... A maze filled with\
-				shelves full of objects: containers, vegetables and other things\
-				are surrounding you.<br />\
+			'description': 'You take the bottle.<br />\
 				There is no other choice than to <b>go on</b>.<br /><br />',
 			'links': {
 				'go on': 'scene6_with_bottle'
