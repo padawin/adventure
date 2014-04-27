@@ -10,7 +10,8 @@
  * 		scene
  * @param newSceneIndex Placeholder, index of the next scene to play
  */
-var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex,value='value'){
+var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex,value){
+	value='value';
 	// Set the initial scene
 	scene=story._start_;
 	// define the function to update the screen with a scene description
