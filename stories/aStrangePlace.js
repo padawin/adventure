@@ -137,7 +137,7 @@ stories[stories.length] = {
 			'description': 'Full of courage, you decide to stay, the butcher is\
 				coming... Then, once standing just in front of you, a huge smile\
 				appear on his face and he asks you if you want some meat. \
-				Stunned, you tell him it\s fine, thinking you should probably\
+				Stunned, you tell him it\'s fine, thinking you should probably\
 				<b>walk away</b>.<br /><br />',
 			'links': {
 				'walk away': 'scene7'
