@@ -88,11 +88,11 @@ stories[stories.length] = {
 			}
 		},
 		'scene7': {
-			'description': 'You turn back and run away from the butcher, who\
+			'description': 'You turn back and walk away from the butcher, who\
 				watch you with a feeling of wonder and amusment in his eyes.<br />\
 				Not long after you meet a woman standing here, next to a\
 				strange device.</br>The woman just ignores you and leave you\
-				no other choice than <b>leaving</b>?<br /><br />',
+				no other choice than <b>leaving</b>.<br /><br />',
 			'links': {
 				'leaving': 'scene10_ending'
 			}
