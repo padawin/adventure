@@ -18,10 +18,10 @@ stories[stories.length] = {
 				// The list of accessible scenes from here, the keys are the
 				// keyword to be typed by the user and the value is the key of
 				// the scene in the scenes list
-				'sone_keyword': 'somes_scene_key'
+				'sone_keyword': 'some_scene_key'
 			}
 		},
-		'somes_scene_key': {
+		'some_scene_key': {
 			'description': '[THE DESCRIPTION IN HTML OF YOUR START SCENE]',
 			'links': {
 				// [...]
