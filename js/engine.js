@@ -24,12 +24,8 @@ var engine=function(story,screen,input,form,scene,updateScreen,newSceneIndex,val
 		newSceneIndex=scene.links[input[value]];
 		input[value]='';
 		input.focus();
-		if(newSceneIndex){
-			// update the current scene
-			scene=story[newSceneIndex];
-			updateScreen();
-		}
-		return false;
+		newSceneIndex && updateScreen(scene=story[newSceneIndex]);
+		return !1;
 	}
 
 	// initial screen update
