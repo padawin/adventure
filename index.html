@@ -5,7 +5,7 @@
 				display: none;
 			}
 		</style>
-		<script type="text/javascript" src="http://padawin.github.io/Butterfly-js/js/Butterfly.js"></script>
+		<script type="text/javascript" src="node_modules/Butterfly-js/dist/butterfly.min.js"></script>
 		<script type="text/javascript" src="js/engine.min.js"></script>
 		<script type="text/javascript" src="stories/aStrangePlace.js"></script>
 		<!-- Include your stories here -->
@@ -20,8 +20,8 @@
 			<input type="submit" value="Send action" />
 		</form>
 		<script type="text/javascript">
-			var B = loader.getModule('bCore');
-			B.addEvent(window,'load',function(){
+			var B = loader.getModule('B');
+			B.on(window,'load',function(){
 				var select=B.$id('select-world'),
 					screen=B.$id('screen'),
 					choice=B.$id('choice'),
@@ -37,7 +37,7 @@
 					);
 				}
 
-				B.addEvent(select,'change',function(){
+				B.on(select,'change',function(){
 					screen.innerHTML = '';
 					choice.value='';
 					choice.focus();
