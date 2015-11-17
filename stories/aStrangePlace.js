@@ -17,7 +17,7 @@ stories[stories.length] = {
 		'scene2': {
 			'description': 'You enter the building.<br />You are now in\
 				a vestibule. On your left, you see someone who seems to\
-				be guarding the place. Hss outfit look like some kind\
+				be guarding the place. His outfit look like some kind\
 				of light and flexible black armor.<br />You can <b>ask</b> the\
 				guard about the place, or ignore him and <b>enter</b> in\
 				the next room.<br /><br />',
